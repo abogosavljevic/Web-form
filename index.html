@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html forms</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input type="text" name="user-name" id="username" required placeholder="Aleksandar Bogosavljevic"/>
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input type="password" name="user-password" id="userpassword" required minlength="7"/>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>More details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input type="number" step="1" name="user-age" id="userage" required min="18" max="100"/>
+            </li>
+            <li>
+              <label for="birthdate">Your birthdate</label>
+              <input type="date" name="birth-date" id="birthdate" />
+            </li>
+            <li>
+              <label for="favouritecolor">Choose your favourite color</label>
+              <select name="favourite-color" id="favouritecolor">
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermessage">Your message</label>
+          <textarea name="user-message" id="usermessage" cols="30" rows="10"></textarea>
+        </section>
+
+        <section>
+          <h2>How should we verify your account?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="textmessage" value="text-message"/>
+              <label for="textmessage">Via text message (SMS)</label>
+            </li>
+      
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="phonecall" value="phone-call" />
+              <label for="phonecall">Via phone call</label>
+            </li>
+      
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="emailaddress" value="email-address" />
+              <label for="emailaddress">Via an email</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we contact you?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input type="checkbox" name="contact" id="contactemail" value="email">
+              <label for="contactemail">Contact me via email</label>
+            </li>
+      
+            <li class="form-control-inline">
+              <input type="checkbox" name="contact" id="contactphone" value="phone">
+              <label for="contactphone">Contact me via phone</label>
+            </li>
+          </ul>
+        </section>
+        
+        <hr>
+
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="agreeterms">
+            <label for="agreeterms">Agree to the terms?</label>
+          </div>
+        </section>
+  
+        <section>
+          <button>Submit</button>
+        </section>
+        
+      </form>
+    </main>
+  </body>
+</html>
